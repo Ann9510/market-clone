@@ -1,4 +1,4 @@
-const form = document.getElementById("signup-form");
+const form = document.querySelector("#signup-form");
 
 const checkPassword = () => {
   const formData = new FormData(form);
