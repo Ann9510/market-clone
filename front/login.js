@@ -12,16 +12,13 @@ const handleSubmit = async (event) => {
   });
   const data = await res.json();
   const accessToken = data.access_token;
+
   console.log(accessToken);
 
-  // console.log("액세스토큰", data);
+  window.localStorage.setItem("token", accessToken);
+  alert("로그인 성공");
 
-  // if (res.status === 200) {
-  //   alert("로그인 성공");
-  //   window.location.pathname = "/";
-  // } else if (res.status === 401) {
-  //   alert("id 혹은 password가 틀렸습니다.");
-  // }
+  // window.location.pathname = "/";
 };
 
 form.addEventListener("submit", handleSubmit);
